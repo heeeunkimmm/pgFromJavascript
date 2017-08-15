@@ -1,5 +1,3 @@
-// console.log(process.argv.slice(2)); //array
-// console.log(process.argv[2]; //input
 
 const valueFromUser = process.argv[2];
 
@@ -21,7 +19,9 @@ pool.connect((err, client, done) => {
     if (err) {
       return console.error("error running query", err);
     }
+
     console.log("Searching...");
+
     const final = result.rows
 
     console.log("Found", final.length, "person(s) by the name '", valueFromUser, "'")
